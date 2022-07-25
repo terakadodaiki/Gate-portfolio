@@ -167,7 +167,7 @@
             width: 75%;
         }
         .navi-hobby-cooking{
-            background-image: url(images/export/hobby-cooking\nav-pic.png);
+            background-image: url(.images/export/hobby-cooking\nav-pic.png);
             /* ここには背景にイメージ入れる */
             background-size: cover;
             position: absolute;
