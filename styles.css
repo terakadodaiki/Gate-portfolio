@@ -141,7 +141,7 @@
 /* ここから個別設定 */
     /* ここからナビゲーションの背景装飾 */
         .navi-about{
-            background-image: url(images/export/about\ nav-pic.png);
+            background-image: url(images/export/about\nav-pic.png);
             /* ここには背景にイメージ入れる */
             background-size: cover;
             position: absolute;
@@ -408,7 +408,7 @@
         }
         .concept-cc{
             text-align: center;
-            margin-top: 60px;
+            margin-top: 90px;
         }
         .cc{
             display: grid;
