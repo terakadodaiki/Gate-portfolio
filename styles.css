@@ -150,7 +150,7 @@
             width: 75%;
         }
         .navi-canmake{
-            background-image: url(images/export/can\ make\ nav-pic.png);
+            background-image: url(images/export/can\make\nav-pic.png);
             /* ここには背景にイメージ入れる */
             background-size: cover;
             position: absolute;
@@ -176,7 +176,7 @@
             width: 75%;
         }
         .navi-hobby-fishing{
-            background-image: url(images/export/hobby-fishing\ nav-pic.png);
+            background-image: url(images/export/hobby-fishing\nav-pic.png);
             /* ここには背景にイメージ入れる */
             background-size: cover;
             position: absolute;
@@ -185,7 +185,7 @@
             width: 75%;
         }
         .navi-concept{
-            background-image: url(images/export/about\ nav-pic.png);
+            background-image: url(images/export/about\nav-pic.png);
             /* ここには背景にイメージ入れる */
             background-size: cover;
             position: absolute;
