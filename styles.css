@@ -408,13 +408,12 @@
         }
         .concept-cc{
             text-align: center;
-            margin-top: 50px;
+            margin-top: 60px;
         }
         .cc{
             display: grid;
             gap: 107px;
             grid-template-columns: 200px 200px 200px;
             margin-left: 300px;
-
         }
     /* ここまでconceptの装飾 */
