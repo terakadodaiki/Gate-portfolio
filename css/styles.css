@@ -1,0 +1,417 @@
+@charset "UTF-8";
+
+/* ここから各ページの共通部分 */
+    /* ここから全体 */
+        *{
+            font-size: 100%;
+            /* height: 100%; */
+        }
+
+        body{
+            background-color: #121212;
+            position: relative;
+            line-height: 1.7;
+            color: #f9f9f9;
+            margin: 0;
+            box-sizing: border-box;
+            user-select: none;
+                /* beforeとafterの内容は幅も高さも画面いっぱいにする */
+        }
+
+        a{
+            text-decoration: none;
+            color: inherit;
+            /* 傍線をなくす */
+        }
+    /* ここまで全体 */
+
+    /* ここからナビメニュー */
+        .burger{
+            z-index: 9;
+            top: 0;
+            left: 0;
+            display: grid;
+            place-items: center;
+            width: 50px;
+            height: 50px;
+            background: url(../images/sidebar/menu.svg) no-repeat center;
+        }
+
+        body.open .burger {
+            z-index: 20;
+            background: url(../images/sidebar/close.svg) no-repeat center;
+        }
+
+        .sidebar{
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100%;
+            /* background: #14274c; */
+            background: url(../images/export/about\ nav-pic.png);
+            background-size: cover;
+            transition: 0.2s;
+        }
+
+        /* button,li{
+            background: transparent;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+        } */
+
+        .sidebar-header{
+            display: grid;
+            place-items: center;
+            height: 50px;
+            background: rgba(218, 218, 218, 0.3);
+        }
+
+        :is(.burger, .logo, .sidebar){
+            position: fixed;
+                /* 位置の固定 */
+            top: 0;
+            /* z-index: 20; */
+        }
+
+        .logo {
+            z-index: 30;
+            top: 5px;
+            left: 25px;
+            width: 50px;
+            height: 45px;
+            scale: 0.9;
+            transition: 0.2s;
+        }
+
+        .sidebar > nav{
+            display: flex;
+            flex-direction: column;
+            /* display: grid; */
+        }
+
+        .sidebar > nav > li:not(:last-child){
+            /* padding-bottom: 0.2rem; */
+            /* border-bottom: 1px solid #1e3660; */
+            margin-bottom: 1rem;
+        }
+
+        .sidebar > nav > li{
+            position: relative;
+            display: grid;
+            place-items: center;
+            width: 100%;
+            padding: 1rem 0;
+            margin-top: 0.8rem;
+        }
+
+        nav > li > a > img{
+            /* position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%; */
+            width: 40px;
+        }
+
+        .sidebar > nav > li > a > span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% 10px;
+            padding: 10px;
+            border-radius: 4px;
+            color: #f9f9f9;
+            /* background: rgba(0, 0, 0, .7); */
+            /* opacity: 0; */
+            /* visibility: hidden; */
+            transition: .4s;
+            font-size: 12px;
+            letter-spacing: 0.2rem;
+        }
+
+        .sidebar > nav > li:hover{
+            background-color: rgba(222, 222, 222, 0.5);
+        }
+
+        @media (width < 500px){
+            /* 幅が500px未満になったとき */
+            .burger{
+                z-index: 100;
+            }
+            .sidebar{
+                translate: -100% 0;
+            }
+            body.open .sidebar{
+                translate: 0 0;
+            }
+        }
+
+        @media (width <= 500px) {
+            /* 幅が500px以下のとき */
+            .logo{
+                left: 50px;
+            }
+            body.open > .logo {
+                translate: 50px;
+            }
+        }
+
+        @media (width >= 500px){
+            /* 幅が500px以上あるとき */
+            .burger{
+                display: none;
+            }
+            /* .sidebar > nav > button:hover > span{
+                opacity: 1;
+                visibility: visible;
+            } */
+        }
+    /* ここまでナビメニュー */
+
+    /* ここからmain-contentsの装飾 */
+        .main-contents{
+            position: relative;
+            /* margin-left: 101px; */
+            display: flex;
+            flex-direction: column
+            /* background-color: #f9f9f9; */
+        }
+
+        .same-title{
+            /* background-color: aqua; */
+            position: absolute;
+            top: 15px;
+            left: calc(100px + 2rem);
+            /* display: inline-block; */
+            height: 3rem;
+            font-size: 2rem;
+            /* font-weight: bold; */
+            /* padding-top: 1%; */
+            /* padding-bottom: 0.5%; */
+            color: #ffffff;
+        }
+    /* ここまでmain-contentsの装飾 */
+
+    /* ここからfooterの装飾 */
+        footer{
+            background-color: #121212;
+            position: relative;
+            position: fixed;
+                /* 表示位置を表示領域下部に常に表示 */
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            text-align: right;
+        }
+        footer > p > small{
+            position: absolute;
+            top: 20%;
+            /* transform: translateY(-50%); */
+            right: 15px;
+        }
+    /* ここまでfooterの装飾 */
+/* ここまで共通部分 */
+
+/* ここから個別設定 */
+    /* ここからabout-contentsの装飾 */
+        .about-contents{
+            border-bottom: 0.5px solid rgba(92, 171, 245, 0.6);
+            padding-bottom: 1rem;
+        }
+
+        .job-history, .license, .greeting{
+            display: flex;
+            /* flex-direction: row; */
+            /* justify-content: space-between; */
+            align-items: center;
+            margin: calc(20px + 3.5rem) 3rem 0 calc(100px + 3rem);
+        }
+
+        /* .job-history,
+        .license,
+        .greeting:nth-child(even){
+            flex-direction: row;
+            margin-top: calc(20px + 3.5rem);
+            margin-left: calc(100px + 3rem);
+        } */
+
+        .self-me{
+            width: 200px;
+            height: 270px;
+        }
+
+        /* ここから職歴の装飾 */
+            .job-direction{
+                margin-top: 1rem;
+                margin-left: 2.5rem;
+                line-height: 2.2rem;
+            }
+
+            .job-direction > span{
+                font-size: 1.6rem;
+                margin-left: -2rem;
+            }
+
+        /* ここから資格の装飾 */
+            .license{
+                display: flex;
+                justify-content: right;
+                align-items: center;
+            }
+
+            .license-direction{
+                margin-top: 1rem;
+                margin-right: 2.5rem;
+                line-height: 2.2rem;
+            }
+
+            .license-direction > span{
+                font-size: 1.6rem;
+                margin-left: -2rem;
+            }
+
+        /* ここからご挨拶の装飾 */
+            .greeting{
+                margin-bottom: 3rem;
+            }
+            .greeting-direction{
+                margin: 1rem 0 0 2.5rem;
+                line-height: 2.2rem;
+            }
+
+            .greeting-direction > span{
+                font-size: 1.6rem;
+                margin-left: -2rem;
+            }
+    /* ここまでabout-contentsの装飾 */
+
+    /* ここからhobby・canmakeの装飾 */
+        .main-container{
+            position: relative;
+            box-sizing: border-box;
+            /* max-width: 1200px; */
+            /* margin: 0 auto; */
+        }
+
+        .grid-content{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(420px,1fr));
+            margin-top: calc(20px + 5.5rem);
+            margin-left: calc(100px + 3rem);
+        }
+
+        .dishes-content, .fishing-content, .canmake-content{
+            filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.5));
+        }
+
+        /* ここからcooking-contentsの装飾 */
+            .cookingtitle-meat{
+                position: absolute;
+                top: calc(20px + 3.5rem);
+                left: calc(100px + 3rem);
+            }
+
+            .cookingtitle-fish, .cookingtitle-noodle{
+                margin-left: calc(100px + 3rem);
+            }
+
+            .dishes-content > img{
+                width: 100%;
+            }
+
+            .dishes-content > p{
+                margin-bottom: 3rem;
+                text-align: center;
+            }
+
+            .fish-dishes, .noodle-dishes{
+                margin-top: 0px;
+            }
+        /* ここまでcooking-contentsの装飾 */
+
+        /* ここからfishing-contentsの装飾 */
+            .fishingtitle-tokyo{
+                position: absolute;
+                top: calc(20px + 3.5rem);
+                left: calc(100px + 3rem);
+            }
+
+            .fishingtitle-shizuoka, .fishingtitle-kanagawa{
+                margin-left: calc(100px + 3rem);
+            }
+
+            .fishing-content > img{
+                width: 100%;
+            }
+
+            .fishing-content > p{
+                margin-bottom: 3rem;
+                text-align: center;
+            }
+
+            .shizuoka-fish, .kanagawa-fish{
+                margin-top: 0px;
+            }
+        /* ここまでfishing-contentsの装飾 */
+
+        /* ここからcanmakeの装飾 */
+            .canmaketitle-site{
+                position: absolute;
+                top: calc(20px + 3.5rem);
+                left: calc(100px + 3rem);
+            }
+
+            .canmaketitle-photoshop, .canmaketitle-illustrator{
+                margin-left: calc(100px + 3rem);
+            }
+
+            .canmake-content > img{
+                width: 100%;
+            }
+
+            .canmake-content > p{
+                margin-bottom: 3rem;
+                text-align: center;
+            }
+
+            .photoshop-canmake, .Illustrator-canmake{
+                margin-top: 0px;
+            }
+        /* ここまでcanmakeの装飾 */
+    /* ここまでhobby・canmakeの装飾 */
+
+    /* ここからconceptの装飾 */
+        .concept-content{
+            position: absolute;
+            width: 62%;
+            top: calc(20px + 5rem);
+            margin-left: calc(20px + 50%);
+            transform: translateX(-50%);
+        }
+
+        .concept-direction{
+            /* background-color: rgb(43, 42, 42); */
+            margin-bottom: 2rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 0.5px solid rgba(92, 171, 245, 0.6);
+        }
+
+        .contact{
+            text-align: center;
+            font-size: 1.6rem;
+            letter-spacing: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-tools{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            gap: 10px;
+            justify-items: center;
+            margin-bottom: 3rem;
+        }
+    /* ここまでconceptの装飾 */
+/* ここまで個別設定 */

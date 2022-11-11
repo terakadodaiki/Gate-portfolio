@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="discription" content="GaTEのポートフォリオサイトです">
+
+        <!-- iconの生成 -->
+        <!-- <link rel="apple-touch-icon" sizes="180x180" href="../portfolio/image/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../portfolio/image/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../portfolio/image/icon/favicon-16x16.png">
+        <link rel="manifest" href="../portfolio/image/icon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff"> -->
+
+
+        <!-- OGPの設定 -->
+        <meta property="og:url" content="http://example/index.html">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="portfolio of GaTE">
+        <meta property="og:discription" content="GaTEのポートフォリオサイトです">
+        <meta property="og:image" content="http://example/image/ogp.jpg">
+
+        <!-- css関連 -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Philosopher">
+            <!-- fontは変えるかも？ -->
+        <link rel="stylesheet" href="./css/styles.css">
+
+        <title></title>
+    </head>
+
+    <body>
+        <button type="button" class="burger" onclick="toggleSidebar()"></button>
+        <img class="logo" src="./images/logo.png" alt="home画面に戻ります">
+
+        <aside class="sidebar">
+            <header class="sidebar-header"></header>
+            <nav>
+                <li type="button">
+                    <a href="index.html">
+                        <img class="home" src="./images/sidebar/home.svg" alt="topに戻ります">
+                        <span>HOME</span>
+                    </a>
+                </li>
+                <li type="button">
+                    <a href="about.html">
+                        <img class="about" src="./images/sidebar/about.svg" alt="aboutに移動します">
+                        <span>about</span>
+                    </a>
+                </li>
+                <li type="button">
+                    <a href="hobby-cooking.html">
+                        <img class="home" src="./images/sidebar/cooking.svg" alt="cookingに移動します">
+                        <span>cooking</span>
+                    </a>
+                </li>
+                <li type="button">
+                    <a href="hobby-fishing.html">
+                        <img class="home" src="./images/sidebar/fishing.svg" alt="fishingに移動します">
+                        <span>fishing</span>
+                    </a>
+                </li>
+                <li type="button">
+                    <a href="can make.html">
+                        <img class="home" src="./images/sidebar/canmake.svg" alt="canmakeに移動します">
+                        <span>canmake</span>
+                    </a>
+                </li>
+                <li type="button">
+                    <a href="concept.html">
+                        <img class="home" src="./images/sidebar/concept.svg" alt="conceptに移動します">
+                        <span>concept</span>
+                    </a>
+                </li>
+            </nav>
+        </aside>
+
+        <h1 class="same-title">GaTE_Portfolio</h1>
+        <main class="main-container main-contents">
+            <h2 class="cookingtitle-meat">肉料理 ― Meat Dishes ―</h2>
+            <div class="grid-content">
+                <div class="dishes-content">
+                    <img src="./images/export/coming soon...(drip).png" alt="">
+                    <p>料理名：チキンのクリーム煮</p>
+                </div>
+
+                <div class="dishes-content">
+                    <img src="./images/export/coming soon...(drip).png" alt="">
+                    <p>料理名：ローストビーフ</p>
+                </div>
+
+                <div class="dishes-content">
+                    <img src="./images/export/coming soon...(drip).png" alt="">
+                    <p>料理名：麻婆豆腐</p>
+                </div>
+            </div>
+
+            <h2 class="cookingtitle-fish">魚料理 ― Fish Dishes ―</h2>
+            <div class="grid-content fish-dishes">
+                <div class="dishes-content">
+                    <img src="./images/export/coming soon...(drip).png" alt="">
+                    <p>料理名：イサキのカルパッチョ</p>
+                </div>
+
+                <div class="dishes-content">
+                    <img src="./images/export/coming soon...(drip).png" alt="">
+                    <p>料理名：3種の刺身の盛り合わせ</p>
+                </div>
+
+                <div class="dishes-content">
+                    <img src="./images/export/coming soon...(drip).png" alt="">
+                    <p>料理名：</p>
+                </div>
+            </div>
+
+            <h2 class="cookingtitle-noodle">飯物・麺類＆デザート ― Rice・Noodles & Dessert―</h2>
+            <div class="grid-content noodle-dishes">
+                <div class="dishes-content">
+                    <img src="./images/export/coming soon...(drip).png" alt="">
+                    <p>料理名：オムライスand和風パスタ</p>
+                </div>
+
+                <div class="dishes-content">
+                    <img src="./images/export/coming soon...(drip).png" alt="">
+                    <p>料理名：カスタードとイチゴのタルト</p>
+                </div>
+
+                <div class="dishes-content">
+                    <img src="./images/export/coming soon...(drip).png" alt="">
+                    <p>料理名：</p>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p><small>&copy;2022 GaTE</small></p>
+            <!-- 実態参照で©コピーライトマークを記述。またコピーライトはsmallタグで囲う -->
+        </footer>
+        <script src="./js/content.js"></script>
+    </body>
+</html>
