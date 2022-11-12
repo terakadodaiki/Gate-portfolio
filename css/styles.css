@@ -15,13 +15,11 @@
             margin: 0;
             box-sizing: border-box;
             user-select: none;
-                /* beforeとafterの内容は幅も高さも画面いっぱいにする */
         }
 
         a{
             text-decoration: none;
             color: inherit;
-            /* 傍線をなくす */
         }
     /* ここまで全体 */
 
@@ -288,11 +286,66 @@
     /* ここまでabout-contentsの装飾 */
 
     /* ここからhobby・canmakeの装飾 */
+        /* ここからhobby選択画面の装飾 */
+            .hobby{
+                position: relative;
+                height: 100vh;
+            }
+
+            .hobby-cooking:hover, .hobby-fishing:hover{
+                filter: drop-shadow(3px 3px 10px rgba(92, 171, 245, 0.6));
+            }
+
+            .hobby-cooking:hover .cooking{
+                background-color: rgba(19, 19, 19, 0.5);
+                color: #f9f9f9;
+            }
+            .hobby-fishing:hover .fishing{
+                background-color: rgba(19, 19, 19, 0.5);
+                color: #f9f9f9;
+
+            }
+
+            .hobby-cooking, .hobby-fishing{
+                position: absolute;
+                border-radius: 1rem;
+                width: 20rem;
+                height: 20rem;
+                letter-spacing: 0.6rem;
+                text-align: center;
+                padding-top: 10%;
+                color: #121212;
+                /* transform: translateY(-10%); */
+                /* vertical-align: middle; */
+            }
+
+            .hobby-cooking{
+                background-image: url(../images/export/hobby-cooking\ nav-pic.jpg);
+                background-size: cover;
+                top: 50%;
+                left: 50%;
+                transform: translate(-100%, -50%);
+            }
+
+            .cooking, .fishing {
+                background-color: rgba(244, 244, 244, 0.5);
+            }
+
+            .hobby-fishing{
+                background-image: url(../images/akahata\ with\ me3.jpg);
+                background-size: cover;
+                top: 50%;
+                left: 50%;
+                transform: translate(50%, -50%);
+            }
+
+        /* ここまでhobby選択画面の装飾 */
+
+
         .main-container{
             position: relative;
             box-sizing: border-box;
             /* max-width: 1200px; */
-            /* margin: 0 auto; */
         }
 
         .grid-content{
